@@ -1,15 +1,22 @@
 import Image from 'next/image'
-import logo from '../../assets/logo.png'
+import logoBanner from '../../assets/logoBanner.png'
 import { ButtonAccess, Container, LoginContainer } from './styles'
 
 import logoGoogle from '../../assets/logoGoogle.png'
 import logoGithub from '../../assets/logoGithub.png'
 import logoRocket from '../../assets/logoRocket.png'
+import { useRouter } from 'next/router'
 
 export default function Home() {
+  const router = useRouter()
+
+  function guest() {
+    router.push('/beginning')
+  }
+
   return (
     <Container>
-      <Image src={logo} quality={100} width={600} height={940} alt="" />
+      <Image src={logoBanner} quality={100} width={600} height={940} alt="" />
       <LoginContainer>
         <div>
           <h1>Boas vindas!</h1>
@@ -23,7 +30,7 @@ export default function Home() {
           <Image src={logoGithub} quality={100} width={32} height={32} alt="" />
           Entrar com GitHub
         </ButtonAccess>
-        <ButtonAccess>
+        <ButtonAccess onClick={() => guest()}>
           <Image src={logoRocket} quality={100} width={32} height={32} alt="" />
           Acessar como visitante
         </ButtonAccess>
