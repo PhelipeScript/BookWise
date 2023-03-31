@@ -6,7 +6,7 @@ export const SidebarContainer = styled('div', {
   justifyContent: 'space-between',
 
   width: 232,
-  minHeight: 988,
+  minHeight: 924,
   background: 'linear-gradient(180deg, $purple-200 0%, $gray-700 10%);',
   borderRadius: '$md',
   padding: '$10 3rem $6',
