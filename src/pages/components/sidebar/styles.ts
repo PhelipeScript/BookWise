@@ -6,10 +6,20 @@ export const SidebarContainer = styled('div', {
   justifyContent: 'space-between',
 
   width: 232,
-  minHeight: 924,
+  height: 924,
   background: 'linear-gradient(180deg, $purple-200 0%, $gray-700 10%);',
   borderRadius: '$md',
   padding: '$10 3rem $6',
+
+  '@media(max-width: 600px)': {
+    width: 'calc(100vw - 40px)',
+    height: 140,
+    padding: '$3',
+
+    flexDirection: 'row',
+    alignItems: 'flex-end',
+    position: 'relative',
+  },
 })
 
 export const SidebarMenu = styled('nav', {
@@ -17,6 +27,10 @@ export const SidebarMenu = styled('nav', {
   flexDirection: 'column',
   gap: '$4',
   marginTop: '4rem',
+
+  '@media(max-width: 600px)': {
+    flexDirection: 'row',
+  },
 })
 
 export const SidebarItem = styled('button', {
@@ -71,6 +85,8 @@ export const SignInButton = styled('button', {
   display: 'flex',
   alignItems: 'center',
   gap: '$3',
+  maxWidth: 122,
+  maxHeight: 34,
   margin: '0 auto',
   padding: '$3',
   borderRadius: '$sm',
@@ -92,5 +108,11 @@ export const SignInButton = styled('button', {
 
   svg: {
     color: '$green-100',
+  },
+
+  '@media(max-width: 600px)': {
+    position: 'absolute',
+    top: 10,
+    right: 0,
   },
 })

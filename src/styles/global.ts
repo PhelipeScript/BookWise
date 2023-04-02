@@ -13,4 +13,10 @@ export const globalStyles = globalCss({
     fontSize: '$md',
     '-webkit-font-smoothing': 'antialiased',
   },
+
+  '@media(max-width: 600px)': {
+    html: {
+      fontSize: '87.5%',
+    },
+  },
 })

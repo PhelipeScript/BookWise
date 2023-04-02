@@ -6,14 +6,26 @@ export const Container = styled('div', {
   display: 'grid',
   gridTemplateColumns: '232px 1fr',
   gap: '6rem',
-  paddingTop: '$5',
-  paddingLeft: '$5',
+  padding: '$5',
+  border: '1px solid red',
+
+  '@media(max-width: 600px)': {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '$10',
+  },
 })
 
 export const BeginningContainer = styled('div', {
   display: 'grid',
   gridTemplateColumns: '2fr 1fr',
   paddingTop: 72,
+
+  '@media(max-width: 600px)': {
+    gridTemplateColumns: '1fr',
+    gap: '$10',
+    paddingTop: 0,
+  },
 })
 
 export const BeginningMain = styled('main', {

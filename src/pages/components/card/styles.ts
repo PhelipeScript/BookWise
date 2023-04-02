@@ -7,12 +7,12 @@ export const CardContainer = styled('div', {
   variants: {
     size: {
       sm: {
-        width: 324,
+        maxWidth: 324,
         height: 130,
         padding: '18px 20px',
       },
       lg: {
-        width: 608,
+        maxWidth: 608,
         height: 280,
         padding: 24,
       },
