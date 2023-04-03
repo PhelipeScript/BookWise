@@ -1,8 +1,12 @@
-import { styled } from '../../../../stitches.config'
+import { styled } from '../../../stitches.config'
 
-export const CardContainer = styled('div', {
+export const Card = styled('div', {
   background: '$gray-700',
   borderRadius: '$md',
+
+  '& + &': {
+    marginTop: '$3',
+  },
 
   variants: {
     size: {

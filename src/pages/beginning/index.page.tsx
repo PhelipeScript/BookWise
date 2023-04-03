@@ -1,7 +1,7 @@
 import { ChartLineUp } from 'phosphor-react'
 import { Sidebar } from '../components/sidebar'
 import { BeginningContainer, BeginningMain, Container } from './styles'
-import { Card } from '../components/card'
+import { LastRating } from './components/lastRating'
 
 export default function Beginning() {
   return (
@@ -14,7 +14,12 @@ export default function Beginning() {
             Início
           </h1>
           <p>Avaliações mais recentes</p>
-          <Card size="lg"></Card>
+          <LastRating />
+          <LastRating />
+          <LastRating />
+          <LastRating />
+          <LastRating />
+          <LastRating />
         </BeginningMain>
 
         <aside>

@@ -2,12 +2,11 @@ import { styled } from '../../../stitches.config'
 
 export const Container = styled('div', {
   width: '100vw',
-  height: '100vh',
+  minHeight: '100vh',
   display: 'grid',
   gridTemplateColumns: '232px 1fr',
   gap: '6rem',
   padding: '$5',
-  border: '1px solid red',
 
   '@media(max-width: 600px)': {
     display: 'flex',
