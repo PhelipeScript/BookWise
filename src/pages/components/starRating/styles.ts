@@ -10,4 +10,8 @@ export const StarButton = styled('button', {
   all: 'unset',
   cursor: 'pointer',
   color: '$purple-100',
+
+  '&:disabled': {
+    cursor: 'default',
+  },
 })

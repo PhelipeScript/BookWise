@@ -1,7 +1,20 @@
-import { ChartLineUp } from 'phosphor-react'
+import { CaretRight, ChartLineUp } from 'phosphor-react'
 import { Sidebar } from '../components/sidebar'
-import { BeginningContainer, BeginningMain, Container } from './styles'
+import {
+  BeginningContainer,
+  BeginningMain,
+  BookDataContainer,
+  Container,
+  PopularBooksContainer,
+} from './styles'
 import { LastRating } from './components/lastRating'
+import { Card } from '../components/card'
+import Image from 'next/image'
+
+import { StarRating } from '../components/starRating'
+import { library } from '../utils/booksData'
+
+const popularBooks = library.slice(0, 5)
 
 export default function Beginning() {
   return (
@@ -22,9 +35,28 @@ export default function Beginning() {
           <LastRating />
         </BeginningMain>
 
-        <aside>
-          <h1>Teste</h1>
-        </aside>
+        <PopularBooksContainer>
+          <p>
+            Livros populares
+            <a href="#">
+              Ver todos
+              <CaretRight weight="bold" />
+            </a>
+          </p>
+
+          {popularBooks.map((book, i) => {
+            return (
+              <Card style={{ display: 'flex', gap: '20px' }} key={i}>
+                <Image width={64} height={94} src={book.imageUrl} alt="" />
+                <BookDataContainer>
+                  <h3>{book.title}</h3>
+                  <span>{book.author}</span>
+                  <StarRating amountOfStars={4} />
+                </BookDataContainer>
+              </Card>
+            )
+          })}
+        </PopularBooksContainer>
       </BeginningContainer>
     </Container>
   )
